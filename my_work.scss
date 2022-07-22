@@ -1,0 +1,39 @@
+@import "normalize.css";
+
+* {
+  font-family: "Heebo Medium", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 148px;
+
+  .text-header {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: neebo, sans-serif;
+    margin: 10px 42px 0 0;
+    transition: 0.3s;
+
+  }
+
+  .text-header:hover {
+    color: #FFB800;
+    margin: 5px 42px 0 0;
+
+  }
+
+  a {
+    color: black;
+
+  }
+}

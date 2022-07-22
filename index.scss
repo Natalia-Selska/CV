@@ -1,0 +1,309 @@
+@import "normalize.css";
+
+* {
+  font-family: "Heebo Medium", sans-serif;
+}
+
+body {
+  @mixin copy__text_end {
+    overflow-x: hidden;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  @include copy__text_end;
+}
+
+.main-page {
+  width: 1440px;
+  height: 745px;
+  position: relative;
+  margin: 0 auto;
+
+  .up_line {
+    position: absolute;
+    top: 0;
+    right: 40px;
+
+  }
+
+  .main-page__content {
+    margin: 110px auto;
+    width: 1140px;
+    display: flex;
+
+
+    .main__text {
+      display: flex;
+      flex-direction: column;
+
+      .h1__text {
+        font-size: 55px;
+        font-weight: bold;
+        max-width: 570px;
+        margin: 0 0 65px 0;
+
+      }
+
+      .h2__text {
+        font-size: 38px;
+        margin: 0 0 65px 0;
+
+      }
+
+      .button {
+        width: 260px;
+        height: 59px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFB800;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+        border-radius: 6px;
+      }
+
+      .button:hover {
+        background-color: #ffc741;
+
+      }
+
+      .button:active {
+        background-color: #d39600;
+        box-shadow: 0 10px 10px rgba(159, 159, 159, 0.37);
+      }
+
+    }
+
+  }
+
+  .down__img {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 148px;
+
+  .text-header {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: neebo, sans-serif;
+    margin: 10px 42px 0 0;
+    transition: 0.3s;
+
+  }
+
+  a {
+    color: black;
+  }
+
+  .text-header:hover {
+    color: #FFB800;
+    margin: 5px 42px 0 0;
+
+  }
+
+}
+
+@mixin box {
+  .work {
+    width: 525px;
+    height: 370px;
+    background-color: white;
+    padding: 25px 0 0 25px;
+    margin: 0 46px 0 0;
+  }
+
+  .one__box {
+    margin: 40px 0 0 0;
+  }
+  .name__work__place {
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0 0 12px 0;
+
+  }
+  .position {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+  }
+  .data {
+    font-size: 23px;
+    margin: 0 0 31px 0;
+  }
+
+  .works {
+    font-size: 20px;
+    margin: 0 0 9px 0;
+  }
+}
+
+.wrapper {
+  background-color: #FFF8E0;
+  height: 550px;
+  width: 100%;
+
+  .experience {
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 45px 0 0 0;
+  }
+
+  .my__work {
+    display: flex;
+    justify-content: center;
+    margin: 45px 0 0 0;
+    @include box;
+  }
+
+  .content {
+    width: 1100px;
+    margin: 0 auto;
+
+  }
+
+}
+
+@mixin course() {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background-color: #FFC700;
+  box-shadow: -15px 15px 0 #FFF8E0;
+
+}
+
+%course_text {
+
+
+  .h4 {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0 0 18px 0;
+
+  }
+
+  .h5 {
+    font-size: 23px;
+    margin: 0 0 18px 0;
+    font-weight: 500;
+
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      list-style-type: disc;
+      margin: 0 0 14px 0;
+      font-size: 20px;
+
+    }
+  }
+
+}
+
+%align_course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+
+}
+
+.block-2 {
+  width: 1100px;
+  margin: 0 auto;
+  height: 1300px;
+
+  .block-2__description {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 45px 0;
+  }
+
+  .wrapper-2 {
+    position: relative;
+
+    .description {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 0;
+
+    }
+
+    .first-course {
+      @include course;
+      top: 0;
+      @extend %course_text;
+      @extend %align_course;
+
+    }
+
+    .first_line_course {
+      position: absolute;
+      top: 190px;
+      left: 465px;
+
+    }
+
+    .two-course {
+      @include course;
+      top: 355px;
+      right: 0;
+      box-shadow: 15px 15px 0 #FFF8E0;
+      @extend %course_text;
+      @extend %align_course;
+
+    }
+
+    .last_line_course {
+      position: absolute;
+      top: 686px;
+      left: 427px;
+
+    }
+
+    .tree-course {
+      @include course;
+      top: 740px;
+      @extend %course_text;
+      @extend %align_course;
+
+    }
+
+  }
+
+}
+
+.footer {
+  width: 100%;
+  height: 176px;
+  background-color: #FFF8E0;
+  display: flex;
+  justify-content: center;
+
+  .icons {
+    margin: auto 0;
+
+  }
+
+  #dribble {
+    margin: 7px 0 0 0;
+  }
+
+}
+
