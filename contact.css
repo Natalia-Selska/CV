@@ -1,3 +1,64 @@
+@import "normalize.css";
+* {
+  font-family: "Heebo Medium", sans-serif;
+}
 
+.wrapper-header {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 1440px;
+}
+.header .text-header {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: neebo, sans-serif;
+  margin: 10px 42px 0 0;
+  transition: 0.3s;
+}
+.header .text-header:hover {
+  color: #FFB800;
+  margin: 5px 42px 0 0;
+}
+.header a {
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px 0 0 0;
+}
+.content .element {
+  display: flex;
+  margin: 80px 40px;
+  width: 570px;
+  height: 110px;
+}
+.content .text {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 35px 0 0 0;
+}
+.content img {
+  margin: 0 30px 0 0;
+}
+
+.bc_contact {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
 
 /*# sourceMappingURL=contact.css.map */
